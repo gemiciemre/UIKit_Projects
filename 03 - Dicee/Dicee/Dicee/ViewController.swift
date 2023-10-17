@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var diceImageViewTwo: UIImageView!
     
     
+    var diceArray: [String] = ["DiceOne, DiceTwo, DiceThree","DiceFour", "DiceFive", "DiceSix"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -21,6 +23,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func rollButtunPressed(_ sender: UIButton) {
+        
+        diceImageViewOne.image = UIImage(named:diceArray[Int.random(in: 0...5)])
+        diceImageViewTwo.image = UIImage(named:diceArray[Int.random(in: 0...5)])
+
+        
     }
     
 }
